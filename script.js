@@ -125,6 +125,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ---- Lightbox for Gallery ----
+  const galleryImages = document.querySelectorAll('.event-gallery img');
+  if (galleryImages.length > 0) {
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    lightbox.innerHTML = `
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-img" src="" alt="Full size photo">
+    `;
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = lightbox.querySelector('.lightbox-img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; 
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg && e.target !== closeBtn) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
   // ---- Counter Animation ----
   document.querySelectorAll('.stat-num[data-count]').forEach(el => {
     const countObserver = new IntersectionObserver((entries) => {

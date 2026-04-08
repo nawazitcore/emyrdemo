@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events | EMYR Green Building Consultants</title>
     <meta name="description"
-        content="Latest happenings, conferences, and seminars attended and hosted by EMYR Green Building Consultants." />
+        content="Latest happenings, conferences and seminars attended and hosted by EMYR Green Building Consultants." />
     <meta name="keywords"
         content="Green Building Consultants India, EMYR Events, Sustainable Building Experts, Green Building Congress" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,6 +23,7 @@
             gap: 2rem;
             margin-top: 2rem;
         }
+
         .event-card {
             background: #fff;
             border-radius: var(--radius-md);
@@ -31,10 +32,70 @@
             border: 1px solid var(--gray-100);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .event-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-md);
         }
+
+        .event-gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.1));
+            cursor: pointer;
+        }
+
+        /* Lightbox */
+        #lightbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        #lightbox.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #lightbox .lightbox-img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: var(--radius-sm, 8px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        #lightbox.active .lightbox-img {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: #fff;
+            font-size: 3rem;
+            cursor: pointer;
+            z-index: 10000;
+            transition: color 0.3s;
+            line-height: 1;
+            user-select: none;
+        }
+
+        .lightbox-close:hover {
+            color: #ccc;
+        }
+
         .event-title {
             font-family: var(--font-heading);
             font-size: 1.5rem;
@@ -42,10 +103,27 @@
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
+
         .event-desc {
             color: var(--text-soft);
             margin-bottom: 1.5rem;
             line-height: 1.6;
+        }
+
+        .event-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .event-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius-sm, 8px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: var(--shadow-sm, 0 1px 2px rgba(0, 0, 0, 0.05));
         }
     </style>
 </head>
@@ -74,7 +152,7 @@
     <!-- PAGE HEADER -->
     <section class="page-header">
         <h1>Events</h1>
-        <p>Latest happenings, conferences, and seminars</p>
+        <p>Latest happenings, conferences and seminars</p>
     </section>
 
     <!-- EVENTS SECTION -->
@@ -87,8 +165,34 @@
             <div class="events-grid" data-aos="fade-up">
                 <div class="event-card">
                     <h3 class="event-title">CII - IGBC GREEN BUILDING CONGRESS - NOV 2025</h3>
-                    <p class="event-desc">We successfully participated in the CII - IGBC Green Building Congress in November 2025. This flagship event brought together architects, developers, and sustainability experts to explore the latest in sustainable building practices, innovative solutions, and expert insights. View our gallery to see highlights from the event.</p>
-                    <a href="https://photos.google.com/share/AF1QipOrKPvsPYs6K-dh1P4HjuTlnZBkz8Qf5QtTjrS4zfymIIjgOvHXG9WibDDprutiSA?key=S1c1R0FnMTM2TV9lbUlqeDFsRl9PcWJlNjBPWWNn" target="_blank" class="btn btn-primary">View Event Photos & Details</a>
+                    <p class="event-desc">We successfully participated in the CII - IGBC Green Building Congress in
+                        November 2025. This flagship event brought together architects, developers and sustainability
+                        experts to explore the latest in sustainable building practices, innovative solutions and expert
+                        insights. View our gallery to see highlights from the event.</p>
+                    <div class="event-gallery">
+                        <img src="images/20251127_130629.jpg" alt="Event Photo 1" loading="lazy">
+                        <img src="images/20251127_130633.jpg" alt="Event Photo 2" loading="lazy">
+                        <img src="images/20251127_130651.jpg" alt="Event Photo 3" loading="lazy">
+                        <img src="images/20251127_131959.jpg" alt="Event Photo 4" loading="lazy">
+                        <img src="images/20251127_180701.jpg" alt="Event Photo 5" loading="lazy">
+                        <img src="images/20251127_183758.jpg" alt="Event Photo 6" loading="lazy">
+                        <img src="images/20251127_183918.jpg" alt="Event Photo 7" loading="lazy">
+                        <img src="images/20251127_195111.jpg" alt="Event Photo 8" loading="lazy">
+                        <img src="images/20251128_105314.jpg" alt="Event Photo 9" loading="lazy">
+                        <img src="images/20251128_115919.jpg" alt="Event Photo 10" loading="lazy">
+                        <img src="images/20251128_143846.jpg" alt="Event Photo 11" loading="lazy">
+                        <img src="images/20251128_162432.jpg" alt="Event Photo 12" loading="lazy">
+                        <img src="images/20251128_201227.jpg" alt="Event Photo 13" loading="lazy">
+                        <img src="images/20251129_140730.jpg" alt="Event Photo 14" loading="lazy">
+                        <img src="images/20251129_140825.jpg" alt="Event Photo 15" loading="lazy">
+                        <img src="images/20251129_142624.jpg" alt="Event Photo 16" loading="lazy">
+                        <img src="images/20251129_142636.jpg" alt="Event Photo 17" loading="lazy">
+                        <img src="images/20251129_155835.jpg" alt="Event Photo 18" loading="lazy">
+                        <img src="images/20251129_155838.jpg" alt="Event Photo 19" loading="lazy">
+                        <img src="images/20251129_155851.jpg" alt="Event Photo 20" loading="lazy">
+                        <img src="images/20251129_175758.jpg" alt="Event Photo 21" loading="lazy">
+                        <img src="images/20251129_180430.jpg" alt="Event Photo 22" loading="lazy">
+                    </div>
                 </div>
             </div>
         </div>
