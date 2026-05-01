@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us | EMYR Green Building Consultants</title>
+    <title>Contact Us | Emyr Green Building Consultants</title>
     <meta name="description"
-        content="Get in touch with EMYR Green Building Consultants for expert green building certification and sustainability consulting in India." />
+        content="Get in touch with Emyr Green Building Consultants for expert green building certification and sustainability consulting in India." />
     <meta name="keywords"
         content="Contact Green Building Consultant, LEED Consultant Hyderabad, IGBC Consultant Telangana, ECBC Compliance India" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <!-- <link rel="icon" type="image/png" href="Emyr1_logo.png" /> -->
+    <link rel="icon" type="image/png" href="Emyr1_logo.png" />
 </head>
 
 <body>
@@ -24,7 +24,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <!-- <img src="Emyr1_logo.png" alt="EMYR Green Building Consultants" class="logo-img" /> -->
+                <img src="Emyr1_logo.png" alt="Emyr Green Building Consultants" class="logo-img" />
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="nav-link">Home</a></li>
@@ -48,75 +48,32 @@
     <!-- CONTACT SECTION -->
     <section class="section contact-section">
         <div class="container">
-            <div class="contact-grid">
-                <!-- FORM -->
-                <div class="contact-form" data-aos="fade-right">
-                    <h3
-                        style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;margin-bottom:8px;color:var(--gray-900);">
-                        Send Us a Message</h3>
-                    <p style="color:var(--text-soft);margin-bottom:32px;">Fill out the form below and we'll get back to you.</p>
-                    <form id="contactForm" onsubmit="handleSubmit(event)">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" placeholder="Your full name" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" />
-                        </div>
-                        <div class="form-group">
-                            <label for="projectType">Project Type</label>
-                            <select id="projectType" name="projectType">
-                                <option value="">Select project type</option>
-                                <option value="commercial">Commercial Building</option>
-                                <option value="residential">Residential Project</option>
-                                <option value="industrial">Industrial Facility</option>
-                                <option value="institutional">Institutional Building</option>
-                                <option value="township">Township / SEZ</option>
-                                <option value="retrofit">Existing Building Retrofit</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message"
-                                placeholder="Tell us about your project and how we can help..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%;">Send Message
-                            🚀</button>
-                    </form>
-                    <div class="form-success hidden" id="formSuccess">
-                        ✅ Thank you! Your message has been sent successfully. We'll get back to you soon.
-                    </div>
-                </div>
+            <div class="contact-grid" style="grid-template-columns: 1fr;">
 
                 <!-- CONTACT INFO -->
-                <div class="contact-info-panel" data-aos="fade-left">
-                    <div class="info-card">
-                        <h4>📍 Office Address</h4>
+                <div class="contact-info-panel" data-aos="fade-left"
+                    style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 28px;">
+                    <div class="info-card" style="flex: 1 1 300px; max-width: 380px; text-align: center;">
+                        <h4 style="justify-content: center;">📍 Office Address</h4>
                         <p>Wibpro International, Safa Arcade Building, 2nd Floor, Opposite Pillar No. 15, Mehdipatnam,
                             Hyderabad - 500028, TELANGANA</p>
                     </div>
-                    <div class="info-card">
-                        <h4>📱 Call / WhatsApp</h4>
+                    <div class="info-card" style="flex: 1 1 300px; max-width: 380px; text-align: center;">
+                        <h4 style="justify-content: center;">📱 Call / WhatsApp</h4>
                         <p><a href="tel:+917993069321">+91 799 3069 321</a></p>
                         <p style="margin-top:8px;"><a href="https://wa.me/917993069321"
                                 style="color:var(--green-600);font-weight:600;">💬 Chat on WhatsApp →</a></p>
                     </div>
-                    <div class="info-card">
-                        <h4>📧 Email Us</h4>
+                    <div class="info-card" style="flex: 1 1 300px; max-width: 380px; text-align: center;">
+                        <h4 style="justify-content: center;">📧 Email Us</h4>
                         <p><a href="mailto:contact@emyrgreen.com">contact@emyrgreen.com</a></p>
                     </div>
-                    <div class="info-card">
-                        <h4>🌐 Website</h4>
+                    <div class="info-card" style="flex: 1 1 300px; max-width: 380px; text-align: center;">
+                        <h4 style="justify-content: center;">🌐 Website</h4>
                         <p><a href="https://www.emyrgreen.com">www.emyrgreen.com</a></p>
                     </div>
-                    <div class="info-card">
-                        <h4>🕐 Business Hours</h4>
+                    <div class="info-card" style="flex: 1 1 300px; max-width: 380px; text-align: center;">
+                        <h4 style="justify-content: center;">🕐 Business Hours</h4>
                         <p>Monday – Saturday: 9:00 AM – 6:00 PM<br />Sunday: Closed</p>
                     </div>
                 </div>
@@ -124,10 +81,9 @@
 
             <!-- GOOGLE MAP -->
             <div class="map-section" data-aos="fade-up">
-                <iframe
-                    src="https://maps.google.com/maps?q=17.394606,78.439443&hl=en&z=15&amp;output=embed"
+                <iframe src="https://maps.google.com/maps?q=17.394606,78.439443&hl=en&z=15&amp;output=embed"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                    title="EMYR Office Location"></iframe>
+                    title="Emyr Office Location"></iframe>
             </div>
         </div>
     </section>
@@ -152,7 +108,7 @@
                 <div class="footer-grid">
                     <div class="footer-brand">
                         <div class="footer-logo">
-                            <!-- <img src="Emyr1_logo.png" alt="EMYR Green Building Consultants" class="logo-img-footer" /> -->
+                            <img src="Emyr1_logo.png" alt="Emyr Green Building Consultants" class="logo-img-footer" />
                         </div>
                         <p>Professional green building certification consulting services for LEED, IGBC, GRIHA & ECBC in
                             India and beyond.</p>
@@ -194,7 +150,7 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 EMYR Green Building Consultants. All Rights Reserved.</p>
+                <p>&copy; 2026 Emyr Green Building Consultants. All Rights Reserved.</p>
                 <p class="footer-credits">Enabling Sustainable & Smart Living</p>
             </div>
         </div>
